@@ -1,0 +1,47 @@
+.recent-video {
+  margin: 60px 0;
+  opacity: 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #00ffcc;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.video-container iframe {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-container iframe {
+    height: 400px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container iframe {
+    height: 250px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
