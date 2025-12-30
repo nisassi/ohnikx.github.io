@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { TEXT } from '../i18n';
 import './TerminalBio.css';
 
-const TYPING_SPEED = 35;
+const TYPING_SPEED = 25;
 
 const TerminalBio = ({ onComplete }) => {
   const { language } = useLanguage();
@@ -37,7 +37,7 @@ const TerminalBio = ({ onComplete }) => {
         setDisplayedLines(prev => [...prev, fullLine]);
         setCurrentText('');
         setCurrentLineIndex(prev => prev + 1);
-      }, 350);
+      }, 250);
       return () => clearTimeout(timeout);
     }
   }, [currentText, currentLineIndex, lines, onComplete]);

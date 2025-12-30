@@ -4,7 +4,6 @@ export const TEXT = {
       '/home/ohnikx > Accessing Website...',
       '/home/ohnikx > Access Granted!',
       '/home/ohnikx > Please report any bug/suggestion in the discord server!',
-      '/home/ohnikx > Learning C, Python, HTML, Zsh & more',
       '/home/ohnikx > Upcoming Content Creator'
     ],
     equipmentTitle: 'My Setup',
