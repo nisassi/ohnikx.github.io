@@ -1,28 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { TEXT } from '../i18n';
 import './TerminalBio.css';
-
-const TERMINAL_LINES = [
-  '/home/ohnikx > Accessing Website...',
-  '/home/ohnikx > Access Granted!',
-  '/home/ohnikx > Note from creator: Welcome to my new Website!',
-  '/home/ohnikx > Learning C, Python, HTML, Zsh & more',
-  '/home/ohnikx > Upcoming Content Creator'
-];
 
 const TYPING_SPEED = 35;
 
 const TerminalBio = ({ onComplete }) => {
+  const { language } = useLanguage();
+  const lines = TEXT[language].terminal;
+
   const [displayedLines, setDisplayedLines] = useState([]);
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
 
   useEffect(() => {
-    if (currentLineIndex >= TERMINAL_LINES.length) {
+    setDisplayedLines([]);
+    setCurrentLineIndex(0);
+    setCurrentText('');
+  }, [language]);
+
+  useEffect(() => {
+    if (currentLineIndex >= lines.length) {
       onComplete?.();
       return;
     }
 
-    const fullLine = TERMINAL_LINES[currentLineIndex];
+    const fullLine = lines[currentLineIndex];
 
     if (currentText.length < fullLine.length) {
       const timeout = setTimeout(() => {
@@ -31,26 +34,24 @@ const TerminalBio = ({ onComplete }) => {
       return () => clearTimeout(timeout);
     } else {
       const timeout = setTimeout(() => {
-        setDisplayedLines([...displayedLines, fullLine]);
+        setDisplayedLines(prev => [...prev, fullLine]);
         setCurrentText('');
-        setCurrentLineIndex(currentLineIndex + 1);
+        setCurrentLineIndex(prev => prev + 1);
       }, 350);
       return () => clearTimeout(timeout);
     }
-  }, [currentText, currentLineIndex, displayedLines, onComplete]);
+  }, [currentText, currentLineIndex, lines, onComplete]);
 
   return (
-    <div className="terminal-bio">
+    <div className="terminal-bio" translate="no" data-notranslate>
       <div className="terminal-window">
-        {displayedLines.map((line, index) => (
-          <div key={index} className="terminal-line">
-            {line}
-          </div>
+        {displayedLines.map((line, i) => (
+          <div key={i} className="terminal-line">{line}</div>
         ))}
-        {currentLineIndex < TERMINAL_LINES.length && (
+        {currentLineIndex < lines.length && (
           <div className="terminal-line">
             {currentText}
-            <span className="cursor"></span> {/* Only one cursor */}
+            <span className="cursor" />
           </div>
         )}
       </div>

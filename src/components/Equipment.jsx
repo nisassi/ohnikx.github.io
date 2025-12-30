@@ -12,7 +12,7 @@ const Equipment = () => {
   const equipment = [
     { icon: Cpu, label: 'CPU', value: 'Intel Core i7-12700KF' },
     { icon: HardDrive, label: 'RAM', value: '16GB DDR4 3200MHz' },
-    { icon: HardDrive, label: 'Storage', value: '1TB NVMe SSD' },
+    { icon: HardDrive, label: 'Storage', value: '1TB SATA SSD' },
     { icon: Zap, label: 'GPU', value: 'NVIDIA RTX 5070' },
     { icon: Zap, label: 'PSU', value: '750W 80+ Gold' },
     { icon: Mouse, label: 'Mouse', value: 'Logitech G Pro X Superlight 2' },

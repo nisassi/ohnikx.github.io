@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
+import BugNotice from './components/BugNotice'; 
 import TerminalBio from './components/TerminalBio';
 import RecentVideo from './components/RecentVideo';
 import GameCards from './components/GameCards';
 import Equipment from './components/Equipment';
 import SocialLinks from './components/SocialLinks';
 import Footer from './components/Footer';
+import { LanguageProvider } from './context/LanguageContext'; 
 
 const BACKGROUND_VIDEOS = [
   "/videos/wandering_swordsman.mp4",
@@ -26,25 +28,28 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <video autoPlay loop muted playsInline className="background-video">
-        <source src={backgroundVideo} type="video/mp4" />
-      </video>
-      <div className="background-overlay"></div>
-      <div className="content">
-        <Header />
-        <TerminalBio onComplete={() => setTerminalComplete(true)} />
-        {terminalComplete && (
-          <>
-            <RecentVideo />
-            <GameCards />
-            <Equipment />
-            <SocialLinks />
-          </>
-        )}
-        <Footer />
+    <LanguageProvider>
+      <div className="App">
+        <video autoPlay loop muted playsInline className="background-video">
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+        <div className="background-overlay"></div>
+        <div className="content">
+          <Header />
+          <BugNotice /> {/* <-- notice added here */}
+          <TerminalBio onComplete={() => setTerminalComplete(true)} />
+          {terminalComplete && (
+            <>
+              <RecentVideo />
+              <GameCards />
+              <Equipment />
+              <SocialLinks />
+            </>
+          )}
+          <Footer />
+        </div>
       </div>
-    </div>
+    </LanguageProvider>
   );
 }
 

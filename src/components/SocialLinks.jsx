@@ -14,7 +14,7 @@ const SocialLinks = () => {
   const socials = [
     { icon: Youtube, label: 'YouTube (Main)', url: 'https://www.youtube.com/@OhNikx' },
     { icon: Youtube, label: 'YouTube 2', url: 'https://www.youtube.com/@OhNikx2' },
-    { icon: TikTokIcon, label: 'TikTok', url: 'https://www.tiktok.com/@ohniikx' }, // <-- use custom icon
+    { icon: TikTokIcon, label: 'TikTok', url: 'https://www.tiktok.com/@ohniikx' },
     { icon: Instagram, label: 'Instagram', url: 'https://www.instagram.com/ohniikx' },
     { icon: Twitch, label: 'Twitch', url: 'https://www.twitch.tv/OhNiikx' },
     { icon: MessageCircle, label: 'Discord', url: 'https://discord.gg/Wr3Dyacpva' }
