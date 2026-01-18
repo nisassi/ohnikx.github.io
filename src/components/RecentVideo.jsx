@@ -15,7 +15,7 @@ const RecentVideo = () => {
         <iframe
           width="100%"
           height="500"
-          src="https://www.youtube.com/embed/KEOu88B9Sm0"
+          src="https://www.youtube.com/embed/TpUjg_-UsNk"
           title="Recent Video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

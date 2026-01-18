@@ -11,7 +11,6 @@ const NORMAL_MESSAGES = [
 
 const SECRET_MESSAGE = "Woaa you found me! Send this in the discord for a surprise ;)";
 
-// 0.001% chance = 1 in 100,000
 const SECRET_CHANCE = 0.0001;
 
 const Header = () => {
