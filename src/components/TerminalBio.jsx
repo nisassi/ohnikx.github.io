@@ -37,7 +37,7 @@ const TerminalBio = ({ onComplete }) => {
         setDisplayedLines(prev => [...prev, fullLine]);
         setCurrentText('');
         setCurrentLineIndex(prev => prev + 1);
-      }, 250);
+      }, 300);
       return () => clearTimeout(timeout);
     }
   }, [currentText, currentLineIndex, lines, onComplete]);
