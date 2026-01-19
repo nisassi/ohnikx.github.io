@@ -11,7 +11,7 @@ const NORMAL_MESSAGES = [
 
 const SECRET_MESSAGE = "Woaa you found me! Send this in the discord for a surprise ;)";
 
-const SECRET_CHANCE = 0.0001;
+const SECRET_CHANCE = 0.001;
 
 const Header = () => {
   const message = useMemo(() => {
