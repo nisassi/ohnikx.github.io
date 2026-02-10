@@ -27,10 +27,10 @@ const GameCards = () => {
   }, []);
 
   const valorantData = {
-    rank: 'Gold 1',
-    date: '28/12/2025',
+    rank: 'Platinum 1',
+    date: '10/2/2026',
     mains: 'Duelists, Initiators.',
-    sensitivity: '0.25 @ 800 DPI',
+    sensitivity: '0.194 @ 800 DPI',
     clipUrl: 'https://customer-assets.emergentagent.com/job_ohnikx-terminal/artifacts/cfh5k76x_valoclip.mp4'
   };
 
