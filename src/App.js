@@ -38,14 +38,22 @@ function App() {
           <Header />
           <BugNotice /> {/* <-- notice added here */}
           <TerminalBio onComplete={() => setTerminalComplete(true)} />
-          {terminalComplete && (
-            <>
-              <RecentVideo />
-              <GameCards />
-              <Equipment />
-              <SocialLinks />
-            </>
-          )}
+         {terminalComplete && (
+  <>
+    <RecentVideo
+      channelId="UCsUaSeJ5deBKVDqLtdCD6Eg"
+      title="Recent Video on Main Channel"
+    />
+    <RecentVideo
+      channelId="UCULYORQHPCYDWcQwUJ3TMnQ"
+      title="Recent Video on Second Channel"
+    />
+    <GameCards />
+    <Equipment />
+    <SocialLinks />
+  </>
+)}
+
           <Footer />
         </div>
       </div>

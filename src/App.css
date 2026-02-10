@@ -102,3 +102,17 @@ a:hover {
     padding: 10px;
   }
 }
+
+/* === New: multiple RecentVideo layout === */
+.recent-video-container {
+  display: flex;
+  gap: 20px; /* space between videos */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.recent-video-container .recent-video {
+  flex: 1 1 45%; /* each video ~45% width, adjusts on smaller screens */
+  max-width: 500px;
+}

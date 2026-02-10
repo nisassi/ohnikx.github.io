@@ -4,6 +4,7 @@
   "private": false,
   "homepage": "https://ohnikx.netlify.app",
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.20",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
@@ -23,7 +24,6 @@
     "predeploy": "npm run build"
   },
   "devDependencies": {
-    "@craco/craco": "^5.9.0",
     "gh-pages": "^6.3.0"
   },
   "browserslist": {
