@@ -8,10 +8,33 @@ export const TEXT = {
     ],
     equipmentTitle: 'My Setup',
     gameStatsTitle: 'Game Stats',
-    recentVideoTitle: 'Recent Video',
+    recentVideoTitle1: 'Recent Video on Main Channel',
+    recentVideoTitle2: 'Recent Video on Second Channel',
     socialLinksTitle: 'You can also find me here!',
     footerText: '© 2025 OhNikx. All rights reserved.',
-    bugNotice: '⚠️I am aware about a bug that makes the screen go completely black with Google automatic translation and I am working on a fix. Please disable the translation until further notice!⚠️'
+    bugNoticeText: 'All Functional',
+    headerMessages: [
+      "Hello, user!",
+      "Welcome in.",
+      "Heya! Welcome in!",
+      "Morning.",
+      "Hello there, wild traveler."
+    ],
+    valorantLabels: {
+      currentRank: 'Current Rank:',
+      lastUpdated: 'Last Updated:',
+      mains: 'Mains:',
+      sensitivity: 'Sensitivity:'
+    },
+    osuLabels: {
+      globalRank: 'Global Rank:',
+      countryRank: 'Country Rank:',
+      pp: 'PP:',
+      accuracy: 'Accuracy:',
+      keyboard: 'Keyboard:',
+      tablet: 'Tablet:',
+      aimingStyle: 'Aiming Style:'
+    }
   },
   it: {
     terminal: [
@@ -23,9 +46,32 @@ export const TEXT = {
     ],
     equipmentTitle: 'Il Mio Hardware',
     gameStatsTitle: 'Statistiche',
-    recentVideoTitle: 'Video Recente',
+    recentVideoTitle1: 'Video Recente nel canale principale',
+    recentVideoTitle2: 'Video Recente nel secondo canale',
     socialLinksTitle: 'Puoi trovarmi anche qui!',
     footerText: '© 2025 OhNikx. Tutti i diritti riservati.',
-    bugNotice: 'Sono a conoscenza di un bug che rende lo schermo completamente nero con la traduzione automatica di Google e sto lavorando a una correzione! Per ora, disattiva la traduzione fino a nuovo avviso!'
+    bugNoticeText: 'Tutto Operativo',
+    headerMessages: [
+      "Ciao, utente!",
+      "Benvenuto.",
+      "Ehi! Benvenuto!",
+      "Buongiorno.",
+      "Salve, viaggiatore selvaggio."
+    ],
+    valorantLabels: {
+      currentRank: 'Rank Attuale:',
+      lastUpdated: 'Ultimo Aggiornamento:',
+      mains: 'Mains:',
+      sensitivity: 'Sensibilità:'
+    },
+    osuLabels: {
+      globalRank: 'Rank Globale:',
+      countryRank: 'Rank Nazionale:',
+      pp: 'PP:',
+      accuracy: 'Accuratezza:',
+      keyboard: 'Tastiera:',
+      tablet: 'Tablet:',
+      aimingStyle: 'Stile di Mira:'
+    }
   }
 };

@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Play } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { TEXT } from '../i18n';
 import './GameCards.css';
 
 const GameCards = () => {
+  const { language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [osuStats, setOsuStats] = useState(null);
 
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
 
-    // === FRONTEND osu! API FETCH ===
-    const OSU_API_KEY = "5f18654c9151ec0bd95f06f25136cf9b0be345d6"; // Not real API Key, This is a random generated key
+    const OSU_API_KEY = "5f18654c9151ec0bd95f06f25136cf9b0be345d6";
     const osuUsername = "NikiOnOsu";
 
     fetch(`https://osu.ppy.sh/api/get_user?k=${OSU_API_KEY}&u=${osuUsername}`)
       .then(res => res.json())
       .then(data => {
-        if (data && data.length > 0) {
-          setOsuStats(data[0]); // API returns an array
-        } else {
-          console.error("No osu! data returned");
-        }
+        if (data && data.length > 0) setOsuStats(data[0]);
       })
       .catch(err => console.error("Failed to fetch osu! stats:", err));
 
@@ -43,7 +41,7 @@ const GameCards = () => {
 
   return (
     <div className={`game-cards ${isVisible ? 'fade-in-up' : ''}`}>
-      <h2 className="section-title">Game Stats</h2>
+      <h2 className="section-title">{TEXT[language].gameStatsTitle}</h2>
 
       <div className="cards-container">
         {/* VALORANT Card */}
@@ -70,13 +68,7 @@ const GameCards = () => {
               <span className="stat-value">{valorantData.sensitivity}</span>
             </div>
             <div className="clip-container">
-              <video
-                src={valorantData.clipUrl}
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
+              <video src={valorantData.clipUrl} autoPlay loop muted playsInline />
             </div>
           </div>
         </div>
@@ -125,13 +117,7 @@ const GameCards = () => {
               <span className="stat-value">{osuData.aimingStyle}</span>
             </div>
             <div className="clip-container">
-              <video
-                src={osuData.clipUrl}
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
+              <video src={osuData.clipUrl} autoPlay loop muted playsInline />
             </div>
           </div>
         </div>
@@ -143,7 +129,9 @@ const GameCards = () => {
             <Play className="icon" size={24} />
           </div>
           <div className="card-content">
-            <p className="fun-note">mattrx on discord said "not coming soon, cry about it" isn't tuff so i changed it to this</p>
+            <p className="fun-note">
+              mattrx on discord said "not coming soon, cry about it" isn't tuff so i changed it to this
+            </p>
           </div>
         </div>
       </div>

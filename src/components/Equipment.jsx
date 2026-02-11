@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Cpu, HardDrive, Zap, Monitor, Mouse, Keyboard, Headphones, Box } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { TEXT } from '../i18n';
 import './Equipment.css';
 
 const Equipment = () => {
+  const { language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -25,7 +28,9 @@ const Equipment = () => {
 
   return (
     <div className={`equipment ${isVisible ? 'fade-in-up' : ''}`}>
-      <h2 className="section-title">Equipment Setup</h2>
+      {/* Titolo multilingua */}
+      <h2 className="section-title">{TEXT[language].equipmentTitle}</h2>
+
       <div className="equipment-grid">
         {equipment.map((item, index) => (
           <div key={index} className="equipment-item">

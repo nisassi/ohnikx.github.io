@@ -1,29 +1,25 @@
 import React, { useMemo } from "react";
 import "./Header.css";
-
-const NORMAL_MESSAGES = [
-  "Hello, user!",
-  "Welcome in.",
-  "Heya! Welcome in!",
-  "Morning.",
-  "Hello there, wild traveler."
-];
+import { useLanguage } from "../context/LanguageContext";
+import { TEXT } from "../i18n";
 
 const SECRET_MESSAGE = "Woaa you found me! Send this in the discord for a surprise ;)";
-
 const SECRET_CHANCE = 0.001;
 
 const Header = () => {
+  const { language } = useLanguage();
+
   const message = useMemo(() => {
+    const messages = TEXT[language].headerMessages;
     const roll = Math.random();
 
     if (roll < SECRET_CHANCE) {
       return SECRET_MESSAGE;
     }
 
-    const randomIndex = Math.floor(Math.random() * NORMAL_MESSAGES.length);
-    return NORMAL_MESSAGES[randomIndex];
-  }, []);
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    return messages[randomIndex];
+  }, [language]); // ricalcola quando cambia la lingua
 
   return (
     <header className="header">
