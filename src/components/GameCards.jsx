@@ -25,10 +25,10 @@ const GameCards = () => {
   }, []);
 
   const valorantData = {
-    rank: 'Platinum 1',
-    date: '10/2/2026',
+    rank: 'Platinum 2',
+    date: '13/2/2026',
     mains: 'Duelists, Initiators.',
-    sensitivity: '0.194 @ 800 DPI',
+    sensitivity: '0.30 @ 800 DPI',
     clipUrl: 'https://customer-assets.emergentagent.com/job_ohnikx-terminal/artifacts/cfh5k76x_valoclip.mp4'
   };
 
@@ -130,7 +130,7 @@ const GameCards = () => {
           </div>
           <div className="card-content">
             <p className="fun-note">
-              mattrx on discord said "not coming soon, cry about it" isn't tuff so i changed it to this
+              Coming soon...
             </p>
           </div>
         </div>

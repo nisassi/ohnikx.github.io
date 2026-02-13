@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Courier New', monospace;
-  background: #000;
-  color: #f0f0f0;
+  background: #ffffff;
+  color: #000000;
   overflow-x: hidden;
 }
 
@@ -33,6 +33,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  background: rgba(255, 255, 255, 0); /* rende il video chiaro */
 }
 
 .content {
@@ -73,20 +74,20 @@ body {
   display: inline-block;
   width: 10px;
   height: 20px;
-  background: #00ffcc;
+  background: #000000;
   margin-left: 2px;
   animation: blink 1s infinite;
 }
 
 /* Links */
 a {
-  color: #00ffcc;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #00ffaa;
+  color: #333333;
   text-decoration: underline;
 }
 
@@ -103,16 +104,16 @@ a:hover {
   }
 }
 
-/* === New: multiple RecentVideo layout === */
+/* === multiple RecentVideo layout === */
 .recent-video-container {
   display: flex;
-  gap: 20px; /* space between videos */
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 40px;
 }
 
 .recent-video-container .recent-video {
-  flex: 1 1 45%; /* each video ~45% width, adjusts on smaller screens */
+  flex: 1 1 45%;
   max-width: 500px;
 }
